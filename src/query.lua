@@ -4,7 +4,7 @@ local ops = {
   eq      = function(result, clause)
     result[clause.field] = clause.arguments[1]
   end,
-  neq     = function(result, clause) queries.simpleOp("$neq", result, clause) end,
+  neq     = function(result, clause) queries.simpleOp("$ne", result, clause) end,
   lt      = function(result, clause) queries.simpleOp("$lt", result, clause) end,
   lte     = function(result, clause) queries.simpleOp("$lte", result, clause) end,
   gt      = function(result, clause) queries.simpleOp("$gt", result, clause) end,
@@ -23,6 +23,10 @@ local ops = {
   end,
   fields  = function(result, clause, meta)
     meta.fields = clause.arguments[1]
+  end,
+  inc     = function(result, clause, meta)
+    if not meta.inc then meta.inc = {} end
+    meta.inc[clause.field] = clause.arguments[1]
   end
 }
 
