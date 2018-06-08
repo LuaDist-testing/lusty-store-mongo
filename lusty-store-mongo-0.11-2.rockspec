@@ -1,9 +1,17 @@
+-- This file was automatically generated for the LuaDist project.
+
 package = "lusty-store-mongo"
 version = "0.11-2"
+-- LuaDist source
 source = {
-  url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.11.tar.gz",
-  dir = "lusty-store-mongo-0.11"
+  tag = "0.11-2",
+  url = "git://github.com/LuaDist-testing/lusty-store-mongo.git"
 }
+-- Original source
+-- source = {
+--   url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.11.tar.gz",
+--   dir = "lusty-store-mongo-0.11"
+-- }
 description = {
   summary = "Mongo plugin for lusty persistence interface.",
   detailed = [[
