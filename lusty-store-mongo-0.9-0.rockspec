@@ -1,16 +1,16 @@
 -- This file was automatically generated for the LuaDist project.
 
 package = "lusty-store-mongo"
-version = "0.8-0"
+version = "0.9-0"
 -- LuaDist source
 source = {
-  tag = "0.8-0",
+  tag = "0.9-0",
   url = "git://github.com/LuaDist-testing/lusty-store-mongo.git"
 }
 -- Original source
 -- source = {
---   url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.8.tar.gz",
---   dir = "lusty-store-mongo-0.8"
+--   url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.9.tar.gz",
+--   dir = "lusty-store-mongo-0.9"
 -- }
 description = {
   summary = "Mongo plugin for lusty persistence interface.",
@@ -37,6 +37,7 @@ build = {
     ["lusty-store-mongo.store.mongo.post"]  = "src/store/mongo/post.lua",
     ["lusty-store-mongo.store.mongo.put"]  = "src/store/mongo/put.lua",
     ["lusty-store-mongo.store.mongo.get"]  = "src/store/mongo/get.lua",
+    ["lusty-store-mongo.store.mongo.options"]  = "src/store/mongo/options.lua",
     ["lusty-store-mongo.store.mongo"]  = "src/store/mongo.lua",
     ["lusty-store-mongo.query"] = "src/query.lua"
   }
