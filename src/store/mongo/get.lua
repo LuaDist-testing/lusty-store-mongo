@@ -1,10 +1,18 @@
 local util = require 'lusty.util'
-local db = util.inline('lusty-store-mongo.store.mongo.connection', {lusty=lusty, config=config})
-local col = db.get_col(config.collection)
+local packageName = (...):match("(.-)[^%.]+$")
 
 return {
   handler = function(context)
-    local query, data = context.query, context.data
-    return col:find(query, data)
+    local col = util.inline(packageName..'.connection', {lusty=lusty, config=config})
+    if context.query['_id'] then
+      return col:find_one(context.query, context.data)
+    else
+      local results = {}
+      local cursor = col:find(context.query, context.data)
+      for index, result in cursor:pairs() do
+        table.insert(results, result)
+      end
+      return results
+    end
   end
 }
