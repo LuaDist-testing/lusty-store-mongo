@@ -1,8 +1,8 @@
 package = "lusty-store-mongo"
-version = "0.6-0"
+version = "0.7-1"
 source = {
-  url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.5.tar.gz",
-  dir = "lusty-store-mongo-0.6"
+  url = "https://github.com/Olivine-Labs/lusty-store-mongo/archive/v0.7.tar.gz",
+  dir = "lusty-store-mongo-0.7"
 }
 description = {
   summary = "Mongo plugin for lusty persistence interface.",
@@ -15,8 +15,8 @@ description = {
 dependencies = {
   "lua >= 5.1",
   "lusty-log >= 0.2-0",
-  "lusty-store >= 0.2-0",
-  "resty-mongol >= 0.5-0",
+  "lusty-store >= 0.4-0",
+  "resty-mongol >= 0.6-0",
   "busted >= 1.7-1"
 }
 build = {
